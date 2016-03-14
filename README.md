@@ -1,4 +1,4 @@
-[![](https://badge.imagelayers.io/sruehl/kafka:latest.svg)](https://imagelayers.io/?images=sruehl/kafka:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/senacor/kafka:latest.svg)](https://imagelayers.io/?images=senacor/kafka:latest 'Get your own badge on imagelayers.io')
 
 Kafka in Docker
 ===
@@ -18,7 +18,7 @@ Run
 ---
 
 ```bash
-docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip \`docker-machine active\`` --env ADVERTISED_PORT=9092 sruehl/kafka
+docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip \`docker-machine active\`` --env ADVERTISED_PORT=9092 senacor/kafka
 ```
 
 ```bash
@@ -33,7 +33,7 @@ kafka-console-consumer.sh --zookeeper $ZOOKEEPER --topic test
 
 In the box
 ---
-* **sruehl/kafka**
+* **senacor/kafka**
 
   The docker image with both Kafka and Zookeeper. Built from the `kafka`
   directory.
@@ -42,13 +42,13 @@ In the box
 Public Builds
 ---
 
-https://registry.hub.docker.com/u/sruehl/kafka/
+https://registry.hub.docker.com/u/senacor/kafka/
 
 
 Build from Source
 ---
 
-    docker build -t sruehl/kafka .
+    docker build -t senacor/kafka .
 
 Todo
 ---
