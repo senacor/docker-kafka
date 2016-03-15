@@ -17,8 +17,14 @@ in the same container. This means:
 Run
 ---
 
+Kafka with log retention limited to 7 days (default)
 ```bash
 docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip \`docker-machine active\`` --env ADVERTISED_PORT=9092 senacor/kafka
+```
+
+Kafka with (more or less) unlimited log retention
+```bash
+docker run -p 2181:2181 -p 9092:9092 --env ADVERTISED_HOST=`docker-machine ip \`docker-machine active\`` --env ADVERTISED_PORT=9092 --env LOG_RETENTION_HOURS=2147483647 senacor/kafka
 ```
 
 ```bash
